@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ps Easy</title>
+</head>
+<body>
+
+    <script>
+       //using count find length of string
+       var b="priyatham"
+        var count2=0;
+        for(name in b)
+        {
+            count2++;  
+        }
+        console.log(count2);
+
+        var c="saipriyatham"
+        var count3=0
+        for(name of c)
+        {
+            count3++; 
+        }
+        console.log(count3);
+
+        var name="venkatj";
+        var c=0;
+        for(i=0;name[i]!=undefined;i++)
+        {
+            c++;
+
+        }
+        console.log(c);
+
+        //problem solving in js easy 
+      //Question-11
+   a=["a", "ccc", "dddd", "bb"]
+   function sort(rv)
+   {
+    b=[]
+    b.push(rv.sort())
+    return b;
+   }
+   console.log(sort(a));
+
+   //Question-12
+   a=[[4, 2, 7, 1],[20, 70, 40, 90],[1, 2, 0]]
+   s=[]
+        for(i=0;i<a.length;i++)
+        {
+            b=[];
+            max= a[i][0]
+                for(j=0;j<a[i].length;j++)
+                {
+                    if((a[i][j])>max)
+                    {
+                        max=a[i][j]     
+                    }  
+                } 
+                b.push(max)
+                s.push(b)
+        }
+        console.log(s);
+
+        //Question-13
+        a=[10, 40, 30, 20, 50]
+        max=0
+        dup=[]
+        for(i of a)
+        {
+            if(i>max)
+            {
+                max=i
+                dup.push(max)
+            }
+        }
+        dup.sort((a,b)=>(b-a))
+        console.log("second max element in an array:"+dup[1]);
+
+     //Question-14
+      a=[1,0]
+      function duplicates(rv)
+      {
+        b=[]
+        for(i=0;i<rv.length;i++)
+        {
+            c=0;
+            for(j=0;j<=i;j++)
+            {
+                if(rv[i]==rv[j])
+                {
+                   c++;
+                }
+            }
+            if(c==1)
+            {
+                b.push(rv[i])
+            }
+        }
+        return b;  
+      }
+      console.log(duplicates(a));
+
+      //Question-15
+      arr=[2, 2, 2, 3, 4, 4, 4]
+      emp=[]
+      unique=""
+      for(i of arr)
+      {
+        if(!emp.includes(i))
+        {
+            emp.push(i)
+        }
+
+      }
+      console.log(emp);
+      for( b of emp)
+      {
+        c=0;
+        for(d of arr)
+        {
+            if(b==d)
+            {
+                c++;
+            }
+        }
+        if(c==1)
+        {
+            unique=unique+b+" "
+
+        }
+      }
+      console.log("Unique value in an given array is:"+unique);
+
+      //Question-16
+      s="c"
+      p="Chamber of secrets"
+      count=0;
+      for(i=0;i<s.length;i++)
+      {
+        for(j=0;j<p.length;j++)
+        {
+            if(s[i]==p[j])
+            {
+                count++;
+            }
+        }
+      }
+      console.log(`The repeated character count in ${s} and ${p} is ${count}`);
+      
+      //Question-17
+      function countVowels(string)
+      {
+        var vowels=0;
+        var cons=0;
+        for(i=0;i<string.length;i++)
+        {
+            var ch=string.charAt(i);
+            if(ch=='a' || ch=='e' || ch=='i' ||ch=='o' ||ch=='u' )
+            {
+                vowels++;
+            }
+            else
+            {
+                cons++;
+            }
+        }
+        console.log("consonants count in celebration is:"+cons);
+        console.log("Vowels count in celebration is:");
+        return vowels;
+      }
+      console.log(countVowels("Celebration"));
+
+       //Question-18
+       p="Happy Birthday"
+      st=""
+      for(i=0;i<p.length;i++)
+      {
+        ch=p.charAt(i)
+        if(ch>='A' && ch<='Z')
+        {
+            st=st+ch.toLowerCase()
+
+        }
+        else
+        {
+            st=st+ch.toUpperCase()
+        }
+      }
+      console.log(st);
+
+       //Question-19
+       n=5
+      m=2
+      st=""
+      for(i=1;i<=n;i++)
+      {
+        res=i*m;
+        st=st+res+" "
+      }
+      console.log("Multiplying 2 with 1 to 5 is:"+st);
+
+       //Question-20
+       num=500
+      console.log("Given value type is:"+typeof(num));
+
+      st="coding"
+      console.log("Given value type is:"+typeof(st));
+
+      //Question-21
+      a=4
+      b=8
+      c=2
+      a>b? console.log(a+" is greater"): b>c? console.log(b+" is greater"): c>a? console.log(c+"is greater"):false;
+
+      //Question-22
+      n=5
+      fact=1;
+      for(i=1;i<=n;i++)
+      {
+        fact=fact*i
+      }
+      console.log(`factorial of ${n} is ${fact}`);
+
+      //Quesion-23
+      a= [2,3,1,5,4]
+      for(i=0;i<a.length;i++)
+      {
+        for(j=i+1;j<a.length;j++)
+        {
+            if(a[j]<a[i])
+            {
+                temp=a[i]
+                a[i]=a[j]
+                a[j]=temp
+            }
+        }
+      }
+      console.log(a);
+
+      //Question-24
+      for(i=1;i<=5;i++)
+      {
+        b="";
+        a=1
+        for(j=0;j<i;j++)
+        {
+            c=a+j;
+            b=b+c+" "
+        }
+        console.log(b);
+      }
+
+      //Question-25
+      var n=5;
+      var p=3;
+      var fact=1;
+      for(i=1;i<=p;i++)
+      {
+         fact=fact*n;
+      }
+      console.log("5 power 3 is:"+fact);
+
+    </script>
+</body>
+</html>
